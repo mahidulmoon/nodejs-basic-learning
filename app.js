@@ -14,3 +14,14 @@ console.log(`Total Memory : ${totalmemory},and Free Memory: ${freememory}`)
 console.log(logger);
 
 logger.log('message'); //module description
+
+
+
+//file system
+
+const fs = require('fs');
+
+fs.readdir('./',function(err,files){
+    if (err) console.log('Error',err);
+    else console.log('Result',files);
+});
