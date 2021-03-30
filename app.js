@@ -1,4 +1,4 @@
-var log = require('./logger');
+var logger = require('./logger');
 
 function sayHello(name){
     console.log('Hello'+name);
@@ -6,6 +6,6 @@ function sayHello(name){
 
 sayHello('Moon');
 
-console.log(log);
+console.log(logger);
 
 logger.log('message'); //module description
