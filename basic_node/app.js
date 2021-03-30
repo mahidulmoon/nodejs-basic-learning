@@ -25,3 +25,19 @@ fs.readdir('./',function(err,files){
     if (err) console.log('Error',err);
     else console.log('Result',files);
 });
+
+
+// class
+
+const eventEmitter = require('events');
+const emitter = new eventEmitter();
+
+
+//register a listener
+
+emitter.on('messageLogged',(arg)=>{
+    console.log('Listener called',arg);
+});
+
+//raise and event
+emitter.emit('messageLogged',{id: 1, url: 'http://'});
